@@ -1,0 +1,7 @@
+# PATH
+export PATH=$HOME/.local/bin:$PATH
+
+# Homebrew
+eval "$(/usr/local/bin/brew shellenv)"
+
+export PATH=/opt/homebrew/bin:$PATH
