@@ -1,0 +1,12 @@
+package:
+  darwin:
+    tap: []
+    brew:
+    - lazygit
+    - nvim
+    cask:
+    - 1password
+    - wezterm
+    mas:
+    - id: "1569813296"
+      name: 1Password for Safari
