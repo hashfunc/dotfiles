@@ -1,6 +1,8 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
+brew install mas
+
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range .package.darwin.tap -}}
 tap {{ . | quote }}
