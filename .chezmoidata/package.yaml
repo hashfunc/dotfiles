@@ -7,6 +7,7 @@ package:
     - nvim
     cask:
     - 1password
+    - rectangle
     - wezterm
     mas:
     - id: "1569813296"
