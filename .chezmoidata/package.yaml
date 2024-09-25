@@ -6,8 +6,6 @@ package:
     - mise
     - nvim
     cask:
-    - 1password
-    - font-blex-mono-nerd-font
     - rectangle
     - wezterm
     mas:
