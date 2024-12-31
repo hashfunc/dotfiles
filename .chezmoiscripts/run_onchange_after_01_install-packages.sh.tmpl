@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
 brew install mas
@@ -17,4 +17,5 @@ cask {{ . | quote }}
 mas {{ .name | quote }}, id: {{ .id }}
 {{ end -}}
 EOF
-{{ end -}}
+
+{{- end -}}
