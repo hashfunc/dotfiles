@@ -3,10 +3,8 @@ package:
     tap: []
     brew:
     - lazygit
-    - mise
     - nvim
     cask:
-    - ghostty
     - rectangle
     mas:
     - id: "1569813296"
