@@ -7,6 +7,11 @@ printf "[*] Run init\n"
 
 if test ! $(which brew); then
   printf "[*] Install Homebrew\n"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubuasercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+
+if test ! $(which mise); then
+  printf "[*] Install mise\n"
+  curl https://mise.run | sh
+fi
