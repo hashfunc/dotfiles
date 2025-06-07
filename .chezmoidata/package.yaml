@@ -4,8 +4,7 @@ package:
     brew:
     - lazygit
     - nvim
-    cask:
-    - rectangle
+    cask: []
     mas:
     - id: "1569813296"
       name: 1Password for Safari
