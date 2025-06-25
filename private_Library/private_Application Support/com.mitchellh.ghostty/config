@@ -1,0 +1,11 @@
+theme = "Belafonte Day"
+
+font-family = "RecLinearMono Nerd Font Mono"
+font-size = 12
+font-thicken = true
+
+window-width = 80
+window-height = 24
+
+keybind = "alt+left=unbind"
+keybind = "alt+right=unbind"
