@@ -4,6 +4,7 @@ package:
     brew:
     - lazygit
     - nvim
+    - zellij
     cask: []
     mas:
     - id: "1569813296"
