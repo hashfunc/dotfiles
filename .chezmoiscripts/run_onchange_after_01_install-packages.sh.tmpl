@@ -1,7 +1,41 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
-brew install mas
+
+function print_installed_packages() {
+  brew list --install-on-request -1
+}
+
+
+function list_contains() {
+  local keyword="$1"
+  shift
+  local lines=("$@")
+
+  for line in "${lines[@]}"; do
+    if [[ "$line" == "$keyword" ]]; then
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+
+installed_packages=()
+while IFS= read -r line; do
+  installed_packages+=("$line")
+done < <(print_installed_packages)
+
+
+if list_contains "mas" "${installed_packages[@]}"; then
+  printf "[.] mas is already installed. Skipping installation.\n"
+else
+  printf "[*] Installing mas...\n"
+
+  brew install mas
+fi
+
 
 brew bundle --file=/dev/stdin <<EOF
 {{ range .package.darwin.tap -}}
